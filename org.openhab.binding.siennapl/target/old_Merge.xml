@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><sca xmlns:functx="http://www.functx.com">
+
+
+
+
+
+   <file name=".binding.siennapl\ESH-INF\thing\thing-types.xml">
+      <message tool="checkstyle" line="528" message="There were whitespace characters used for indentation. Please use tab characters instead" priority="2" rule="OnlyTabIndentationInXmlFilesCheck" category="style"/>
+   </file>
+
+
+
+
+
+
+
+
+
+
+
+
+   <file name="org.openhab.binding.siennapl.internal.gateway.SerialWriter.java">
+      <message tool="checkstyle" line="38" message="Name 'waitCommand_rec' must match pattern '^[a-z][a-zA-Z0-9]*$'." priority="3" rule="MemberNameCheck" category="style"/>
+   </file>
+
+
+
+
+
+
+
+
+
+
+
+
+</sca>

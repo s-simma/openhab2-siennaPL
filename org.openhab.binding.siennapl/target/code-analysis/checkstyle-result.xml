@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.1">
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\.classpath">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\about.html">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\build.properties">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\ESH-INF\binding\binding.xml">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\ESH-INF\thing\bridge.xml">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\ESH-INF\thing\thing-types.xml">
+<error line="528" severity="warning" message="There were whitespace characters used for indentation. Please use tab characters instead" source="org.openhab.tools.analysis.checkstyle.OnlyTabIndentationInXmlFilesCheck"/>
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\META-INF\MANIFEST.MF">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\OSGI-INF\SiennaHandlerFactory.xml">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\pom.xml">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\README.md">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\oepnhab\binding\siennapl\internal\discovery\DeviceDiscoveryService.java">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\internal\siennapl\BindingConstants.java">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\internal\siennapl\BridgeConfiguration.java">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\internal\siennapl\DeviceConfiguration.java">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\siennapl\internal\gateway\ISerialConnector.java">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\siennapl\internal\gateway\SerialConnector.java">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\siennapl\internal\gateway\SerialPacketReader.java">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\siennapl\internal\gateway\SerialReader.java">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\siennapl\internal\gateway\SerialWriter.java">
+<error line="38" column="18" severity="info" message="Name &apos;waitCommand_rec&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\siennapl\internal\handler\BridgeHandler.java">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\siennapl\internal\handler\DeviceHandler.java">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\siennapl\internal\handler\IDeviceHandler.java">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\siennapl\internal\HandlerFactory.java">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\siennapl\internal\packet\ExplicitPacket.java">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\siennapl\internal\packet\NVPacket.java">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\siennapl\internal\utils\Bits.java">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\siennapl\internal\utils\ByteArray.java">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\siennapl\internal\utils\ByteBitSet.java">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\siennapl\internal\utils\ByteStringConverter.java">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\siennapl\internal\utils\CircularByteBuffer.java">
+</file>
+<file name="C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java\org\openhab\binding\siennapl\internal\utils\LonCRC.java">
+</file>
+</checkstyle>

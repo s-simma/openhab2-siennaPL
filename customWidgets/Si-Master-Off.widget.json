@@ -1,0 +1,34 @@
+{
+    "template": "<div>\n <div class=\"row\">\n  <div class=\"ng-binding\">{{config.location_name}}</div>\n </div>\n\n  <div class=\"row\">\n    <button style= \"border: none; background: rgba(0,0,0,0); outline:none;\" \n      ng-click=\"sendCmd(config.gITEM_ID, 'OFF')\"> \n        <widget-icon iconset=\"config.icon_iconset\" icon=\"config.icon\" size=\"config.icon_size\" state=\"itemValue(config.gITEM_ID)\" />          \n    </button>\n\t</div>\n\n <div class=\"row\">\n \t<div class=\"ng-binding\">{{config.function_name}} ({{(itemsInGroup(config.gITEM_ID) | filter:{state:'ON'}).length}})</div>\n </div>\n</div>\n",
+    "name": "Si-Master-Off",
+    "author": "s.simma",
+    "settings": [
+        {
+            "type": "string",
+            "id": "location_name",
+            "label": "Location name"
+        },
+        {
+            "type": "item",
+            "id": "gITEM_ID",
+            "label": "Openhab group item"
+        },
+        {
+            "type": "string",
+            "id": "function_name",
+            "label": "Function name (e.g. All Off)",
+            "default": "All off"
+        },
+        {
+            "type": "icon",
+            "id": "icon",
+            "label": "Icon to display group status",
+            "description": ""
+        },
+        {
+            "type": "number",
+            "id": "icon_size",
+            "label": "icon_size px (e.g. 50)"
+        }
+    ]
+}

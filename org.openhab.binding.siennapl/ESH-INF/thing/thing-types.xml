@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="siennapl"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+	<!-- Sienna Device -->
+
+	<thing-type id="AM1">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="BRIDGE" />
+		</supported-bridge-type-refs>
+		<label>Sienna AM1</label>
+		<description>1 Outlet ON/OFF</description>
+
+		<channels>
+			<channel id="outlet" typeId="outlet"/>
+		</channels>
+
+		<config-description>
+			<parameter name="neuronId" type="text" required="true">
+				<label>Neuron Id</label>
+				<description>The Neuron ID that identifies one specific device.</description>
+			</parameter>
+			<parameter name="groupId" type="text" required="true">
+				<label>Group Id</label>
+				<description>The Group ID must be in a range A to O</description>
+				<default>"A"</default>
+			</parameter>
+			<parameter name="elementId" type="integer" required="true"  min="0" max="15">
+				<label>Element Id</label>
+				<description>The Element ID must be in a range 1 to 15</description>
+				<default>1</default>
+			</parameter>
+			<parameter name="hwCode" type="integer" required="false"  min="0" max="256">
+				<label>Hardware code</label>
+				<description>Product-Code Hardware</description>
+				<default>65</default>
+			</parameter>
+			<parameter name="swCode" type="integer" required="false"  min="0" max="256">
+				<label>Software code</label>
+				<description>Product-Code Software </description>
+				<default>1</default>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+	<thing-type id="AM2X">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="BRIDGE" />
+		</supported-bridge-type-refs>
+		<label>Sienna AM2X</label>
+		<description>2 Outlet ON/OFF pot-free</description>
+
+		<channels>
+			<channel id="outlet" typeId="outlet"/>
+			<channel id="outlet2" typeId="outlet"/>
+		</channels>
+
+		<config-description>
+			<parameter name="neuronId" type="text" required="true">
+				<label>Neuron Id</label>
+				<description>The Neuron ID that identifies one specific device.</description>
+			</parameter>
+			<parameter name="groupId" type="text" required="true">
+				<label>Group Id</label>
+				<description>The Group ID must be in a range A to O</description>
+				<default>"A"</default>
+			</parameter>
+			<parameter name="elementId" type="integer" required="true"  min="0" max="15">
+				<label>Element Id</label>
+				<description>The Element ID must be in a range 1 to 15</description>
+				<default>1</default>
+			</parameter>
+			<parameter name="hwCode" type="integer" required="false"  min="0" max="256">
+				<label>Hardware code</label>
+				<description>Product-Code Hardware</description>
+				<default>69</default>
+			</parameter>
+			<parameter name="swCode" type="integer" required="false"  min="0" max="256">
+				<label>Software code</label>
+				<description>Product-Code Software </description>
+				<default>6</default>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+	<thing-type id="AM2L">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="BRIDGE" />
+		</supported-bridge-type-refs>
+		<label>Sienna AM2L</label>
+		<description>2 Outlet 230V</description>
+
+		<channels>
+			<channel id="outlet" typeId="outlet"/>
+			<channel id="outlet2" typeId="outlet"/>
+		</channels>
+
+		<config-description>
+			<parameter name="neuronId" type="text" required="true">
+				<label>Neuron Id</label>
+				<description>The Neuron ID that identifies one specific device.</description>
+			</parameter>
+			<parameter name="groupId" type="text" required="true">
+				<label>Group Id</label>
+				<description>The Group ID must be in a range A to O</description>
+				<default>"A"</default>
+			</parameter>
+			<parameter name="elementId" type="integer" required="true"  min="0" max="15">
+				<label>Element Id</label>
+				<description>The Element ID must be in a range 1 to 15</description>
+				<default>1</default>
+			</parameter>
+			<parameter name="hwCode" type="integer" required="false"  min="0" max="256">
+				<label>Hardware code</label>
+				<description>Product-Code Hardware</description>
+				<default>67</default>
+			</parameter>
+			<parameter name="swCode" type="integer" required="false"  min="0" max="256">
+				<label>Software code</label>
+				<description>Product-Code Software </description>
+				<default>2</default>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+	<!-- Sienna Device -->
+	<thing-type id="SAM1L">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="BRIDGE" />
+		</supported-bridge-type-refs>
+		<label>Sienna SAM1L</label>
+		<description>1 Input 230V, 1 Outlet 230V</description>
+
+		<channels>
+			<channel id="input" typeId="input"/>
+			<channel id="outlet" typeId="outlet"/>
+		</channels>
+
+		<config-description>
+			<parameter name="neuronId" type="text" required="true">
+				<label>Neuron Id</label>
+				<description>The Neuron ID that identifies one specific device.</description>
+			</parameter>
+			<parameter name="groupId" type="text" required="true">
+				<label>Group Id</label>
+				<description>The Group ID must be in a range A to O</description>
+				<default>"A"</default>
+			</parameter>
+			<parameter name="elementId" type="integer" required="true"  min="0" max="15">
+				<label>Element Id</label>
+				<description>The Element ID must be in a range 1 to 15</description>
+				<default>1</default>
+			</parameter>
+			<parameter name="hwCode" type="integer" required="false"  min="0" max="256">
+				<label>Hardware code</label>
+				<description>Product-Code Hardware</description>
+				<default>97</default>
+			</parameter>
+			<parameter name="swCode" type="integer" required="false"  min="0" max="256">
+				<label>Software code</label>
+				<description>Product-Code Software </description>
+				<default>1</default>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+	<!-- Sienna Device -->
+	<thing-type id="SAM1LT">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="BRIDGE" />
+		</supported-bridge-type-refs>
+		<label>Sienna SAM1LT</label>
+		<description>1 Input 230V, 1 Outlet 230V, Timer</description>
+
+		<channels>
+			<channel id="input" typeId="input"/>
+			<channel id="outlet" typeId="outlet"/>
+		</channels>
+
+		<config-description>
+			<parameter name="neuronId" type="text" required="true">
+				<label>Neuron Id</label>
+				<description>The Neuron ID that identifies one specific device.</description>
+			</parameter>
+			<parameter name="groupId" type="text" required="true">
+				<label>Group Id</label>
+				<description>The Group ID must be in a range A to O</description>
+				<default>"A"</default>
+			</parameter>
+			<parameter name="elementId" type="integer" required="true"  min="0" max="15">
+				<label>Element Id</label>
+				<description>The Element ID must be in a range 1 to 15</description>
+				<default>1</default>
+			</parameter>
+			<parameter name="hwCode" type="integer" required="false"  min="0" max="256">
+				<label>Hardware code</label>
+				<description>Product-Code Hardware</description>
+				<default>97</default>
+			</parameter>
+			<parameter name="swCode" type="integer" required="false"  min="0" max="256">
+				<label>Software code</label>
+				<description>Product-Code Software </description>
+				<default>4</default>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+	<!-- Sienna Device -->
+	<thing-type id="SAM2L">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="BRIDGE" />
+		</supported-bridge-type-refs>
+		<label>Sienna SAM2L</label>
+		<description>2 Input 230V, 2 Outlet 230V</description>
+
+		<channels>
+			<channel id="input" typeId="input"/>
+			<channel id="input2" typeId="input"/>
+			<channel id="outlet" typeId="outlet"/>
+			<channel id="outlet2" typeId="outlet"/>
+		</channels>
+
+		<config-description>
+			<parameter name="neuronId" type="text" required="true">
+				<label>Neuron Id</label>
+				<description>The Neuron ID that identifies one specific device.</description>
+			</parameter>
+			<parameter name="groupId" type="text" required="true">
+				<label>Group Id</label>
+				<description>The Group ID must be in a range A to O</description>
+				<default>"A"</default>
+			</parameter>
+			<parameter name="elementId" type="integer" required="true"  min="0" max="15">
+				<label>Element Id</label>
+				<description>The Element ID must be in a range 1 to 15</description>
+				<default>1</default>
+			</parameter>
+			<parameter name="hwCode" type="integer" required="false"  min="0" max="256">
+				<label>Hardware code</label>
+				<description>Product-Code Hardware</description>
+				<default>99</default>
+			</parameter>
+			<parameter name="swCode" type="integer" required="false"  min="0" max="256">
+				<label>Software code</label>
+				<description>Product-Code Software </description>
+				<default>3</default>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+	<!-- Sienna Device -->
+	<thing-type id="SM2">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="BRIDGE" />
+		</supported-bridge-type-refs>
+		<label>Sienna SM2</label>
+		<description>2 input low voltage</description>
+
+		<channels>
+			<channel id="input" typeId="input"/>
+			<channel id="input2" typeId="input"/>
+		</channels>
+
+		<config-description>
+			<parameter name="neuronId" type="text" required="true">
+				<label>Neuron Id</label>
+				<description>The Neuron ID that identifies one specific device.</description>
+			</parameter>
+			<parameter name="groupId" type="text" required="true">
+				<label>Group Id</label>
+				<description>The Group ID must be in a range A to O</description>
+				<default>"A"</default>
+			</parameter>
+			<parameter name="elementId" type="integer" required="true"  min="0" max="15">
+				<label>Element Id</label>
+				<description>The Element ID must be in a range 1 to 15</description>
+				<default>1</default>
+			</parameter>
+			<parameter name="hwCode" type="integer" required="false"  min="0" max="256">
+				<label>Hardware code</label>
+				<description>Product-Code Hardware</description>
+				<default>3</default>
+			</parameter>
+			<parameter name="swCode" type="integer" required="false"  min="0" max="256">
+				<label>Software code</label>
+				<description>Product-Code Software </description>
+				<default>5</default>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+
+	<thing-type id="SM4">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="BRIDGE" />
+		</supported-bridge-type-refs>
+		<label>Sienna SM4</label>
+		<description>4 Inputs</description>
+
+		<channels>
+			<channel id="input" typeId="input"/>
+			<channel id="input2" typeId="input"/>
+			<channel id="input3" typeId="input"/>
+			<channel id="input4" typeId="input"/>
+		</channels>
+
+		<config-description>
+			<parameter name="neuronId" type="text" required="true">
+				<label>Neuron Id</label>
+				<description>The Neuron ID that identifies one specific device.</description>
+			</parameter>
+			<parameter name="groupId" type="text" required="true">
+				<label>Group Id</label>
+				<description>The Group ID must be in a range A to O</description>
+				<default>"A"</default>
+			</parameter>
+			<parameter name="elementId" type="integer" required="true"  min="0" max="15">
+				<label>Element Id</label>
+				<description>The Element ID must be in a range 1 to 15</description>
+				<default>1</default>
+			</parameter>
+			<parameter name="hwCode" type="integer" required="false"  min="0" max="256">
+				<label>Hardware code</label>
+				<description>Product-Code Hardware</description>
+				<default>4</default>
+			</parameter>
+			<parameter name="swCode" type="integer" required="false"  min="0" max="256">
+				<label>Software code</label>
+				<description>Product-Code Software </description>
+				<default>2</default>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+
+	<thing-type id="SM8">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="BRIDGE" />
+		</supported-bridge-type-refs>
+		<label>Sienna SM8</label>
+		<description>8 Inputs</description>
+
+		<channels>
+			<channel id="input" typeId="input"/>
+			<channel id="input2" typeId="input"/>
+			<channel id="input3" typeId="input"/>
+			<channel id="input4" typeId="input"/>
+			<channel id="input5" typeId="input"/>
+			<channel id="input6" typeId="input"/>
+			<channel id="input7" typeId="input"/>
+			<channel id="input8" typeId="input"/>
+		</channels>
+
+		<config-description>
+			<parameter name="neuronId" type="text" required="true">
+				<label>Neuron Id</label>
+				<description>The Neuron ID that identifies one specific device.</description>
+			</parameter>
+			<parameter name="groupId" type="text" required="true">
+				<label>Group Id</label>
+				<description>The Group ID must be in a range A to O</description>
+				<default>"A"</default>
+			</parameter>
+			<parameter name="elementId" type="integer" required="true"  min="0" max="15">
+				<label>Element Id</label>
+				<description>The Element ID must be in a range 1 to 15</description>
+				<default>1</default>
+			</parameter>
+			<parameter name="hwCode" type="integer" required="false"  min="0" max="256">
+				<label>Hardware code</label>
+				<description>Product-Code Hardware</description>
+				<default>4</default>
+			</parameter>
+			<parameter name="swCode" type="integer" required="false"  min="0" max="256">
+				<label>Software code</label>
+				<description>Product-Code Software </description>
+				<default>1</default>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+
+	<!-- Sienna Device -->
+	<thing-type id="SAMDR">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="BRIDGE" />
+		</supported-bridge-type-refs>
+		<label>Sienna SAMDR</label>
+		<description>Dimmer (phase gating)</description>
+
+		<channels>
+			<channel id="input" typeId="input"/>
+			<channel id="outlet" typeId="outlet"/>
+			<channel id="value" typeId="value"/>
+		</channels>
+
+		<config-description>
+			<parameter name="neuronId" type="text" required="true">
+				<label>Neuron Id</label>
+				<description>The Neuron ID that identifies one specific device.</description>
+			</parameter>
+			<parameter name="groupId" type="text" required="true">
+				<label>Group Id</label>
+				<description>The Group ID must be in a range A to O</description>
+				<default>"A"</default>
+			</parameter>
+			<parameter name="elementId" type="integer" required="true"  min="0" max="15">
+				<label>Element Id</label>
+				<description>The Element ID must be in a range 1 to 15</description>
+				<default>1</default>
+			</parameter>
+			<parameter name="hwCode" type="integer" required="false"  min="0" max="256">
+				<label>Hardware code</label>
+				<description>Product-Code Hardware</description>
+				<default>100</default>
+			</parameter>
+			<parameter name="swCode" type="integer" required="false"  min="0" max="256">
+				<label>Software code</label>
+				<description>Product-Code Software </description>
+				<default>3</default>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+	<!-- Sienna Device -->
+	<thing-type id="SAMDU">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="BRIDGE" />
+		</supported-bridge-type-refs>
+		<label>Sienna SAMDU</label>
+		<description>Dimmer</description>
+
+		<channels>
+			<channel id="input" typeId="input"/>
+			<channel id="outlet" typeId="outlet"/>
+			<channel id="value" typeId="value"/>
+		</channels>
+
+		<config-description>
+			<parameter name="neuronId" type="text" required="true">
+				<label>Neuron Id</label>
+				<description>The Neuron ID that identifies one specific device.</description>
+			</parameter>
+			<parameter name="groupId" type="text" required="true">
+				<label>Group Id</label>
+				<description>The Group ID must be in a range A to O</description>
+				<default>"A"</default>
+			</parameter>
+			<parameter name="elementId" type="integer" required="true"  min="0" max="15">
+				<label>Element Id</label>
+				<description>The Element ID must be in a range 1 to 15</description>
+				<default>1</default>
+			</parameter>
+			<parameter name="hwCode" type="integer" required="false"  min="0" max="256">
+				<label>Hardware code</label>
+				<description>Product-Code Hardware</description>
+			<default>100</default>
+			</parameter>
+			<parameter name="swCode" type="integer" required="false"  min="0" max="256">
+				<label>Software code</label>
+				<description>Product-Code Software </description>
+				<default>4</default>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+	<!-- Sienna Device -->
+	<thing-type id="SAM2">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="BRIDGE" />
+		</supported-bridge-type-refs>
+		<label>Sienna SAM2</label>
+		<description>Rollershutter/Blind</description>
+
+		<channels>
+			<channel id="input_up" typeId="input"/>
+			<channel id="input_down" typeId="input"/>
+			<channel id="command" typeId="command"/>
+			<channel id="outlet_up" typeId="outlet"/>
+			<channel id="outlet_down" typeId="outlet"/>
+			<channel id="position" typeId="position"/>
+			<channel id="angle" typeId="angle"/>
+			<channel id="info" typeId="info"/>
+		</channels>
+
+		<config-description>
+			<parameter name="neuronId" type="text" required="true">
+				<label>Neuron Id</label>
+				<description>The Neuron ID that identifies one specific device.</description>
+			</parameter>
+			<parameter name="groupId" type="text" required="true">
+				<label>Group Id</label>
+				<description>The Group ID must be in a range A to O</description>
+				<default>"A"</default>
+			</parameter>
+			<parameter name="elementId" type="integer" required="true"  min="0" max="15">
+				<label>Element Id</label>
+				<description>The Element ID must be in a range 1 to 15</description>
+				<default>1</default>
+			</parameter>
+			<parameter name="spinTime" type="integer" required="true">
+				<label>Spintime</label>
+				<description>Spintime (ms) 0-90°</description>
+				<default>1000</default>
+			</parameter>
+			<parameter name="runTime" type="integer" required="true">
+				<label>Runtime</label>
+				<description>Runtime of the Rollershutter/Blind (seconds)</description>
+				<default>30</default>
+			</parameter>
+			<parameter name="hwCode" type="integer" required="false"  min="0" max="256">
+				<label>Hardware code</label>
+				<description>Product-Code Hardware</description>
+				<default>99</default>
+			</parameter>
+			<parameter name="swCode" type="integer" required="false"  min="0" max="256">
+				<label>Software code</label>
+				<description>Software-Code (Software version) </description>
+				<default>4</default>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+
+
+    <!-- Sienna Device -->
+    <thing-type id="AM2">
+        <supported-bridge-type-refs>
+            <bridge-type-ref id="BRIDGE" />
+        </supported-bridge-type-refs>
+        <label>Sienna AMX2</label>
+        <description>Motor control</description>
+
+        <channels>
+            <channel id="command" typeId="command"/>
+            <channel id="outlet_up" typeId="outlet"/>
+            <channel id="outlet_down" typeId="outlet"/>
+            <channel id="position" typeId="position"/>
+            <channel id="angle" typeId="angle"/>
+            <channel id="info" typeId="info"/>
+        </channels>
+
+        <config-description>
+            <parameter name="neuronId" type="text" required="true">
+                <label>Neuron Id</label>
+                <description>The Neuron ID that identifies one specific device.</description>
+            </parameter>
+            <parameter name="groupId" type="text" required="true">
+                <label>Group Id</label>
+                <description>The Group ID must be in a range A to O</description>
+                <default>"A"</default>
+            </parameter>
+            <parameter name="elementId" type="integer" required="true"  min="0" max="15">
+                <label>Element Id</label>
+                <description>The Element ID must be in a range 1 to 15</description>
+                <default>1</default>
+            </parameter>
+            <parameter name="spinTime" type="integer" required="true">
+                <label>Spintime</label>
+                <description>Spintime (ms) 0-90°</description>
+                <default>1000</default>
+            </parameter>
+            <parameter name="runTime" type="integer" required="true">
+                <label>Runtime</label>
+                <description>Runtime of the Motor (seconds)</description>
+                <default>30</default>
+            </parameter>
+            <parameter name="hwCode" type="integer" required="false"  min="0" max="256">
+                <label>Hardware code</label>
+                <description>Product-Code Hardware</description>
+                <default>67</default>
+            </parameter>
+            <parameter name="swCode" type="integer" required="false"  min="0" max="256">
+                <label>Software code</label>
+                <description>Software-Code (Software version) </description>
+                <default>7</default>
+            </parameter>
+        </config-description>
+    </thing-type>
+
+    <!-- Sienna Device -->
+    <thing-type id="AMX2">
+        <supported-bridge-type-refs>
+            <bridge-type-ref id="BRIDGE" />
+        </supported-bridge-type-refs>
+        <label>Sienna AMX2</label>
+        <description>Motor control pot. free</description>
+
+        <channels>
+            <channel id="command" typeId="command"/>
+            <channel id="outlet_up" typeId="outlet"/>
+            <channel id="outlet_down" typeId="outlet"/>
+            <channel id="position" typeId="position"/>
+            <channel id="angle" typeId="angle"/>
+            <channel id="info" typeId="info"/>
+        </channels>
+
+        <config-description>
+            <parameter name="neuronId" type="text" required="true">
+                <label>Neuron Id</label>
+                <description>The Neuron ID that identifies one specific device.</description>
+            </parameter>
+            <parameter name="groupId" type="text" required="true">
+                <label>Group Id</label>
+                <description>The Group ID must be in a range A to O</description>
+                <default>"A"</default>
+            </parameter>
+            <parameter name="elementId" type="integer" required="true"  min="0" max="15">
+                <label>Element Id</label>
+                <description>The Element ID must be in a range 1 to 15</description>
+                <default>1</default>
+            </parameter>
+            <parameter name="spinTime" type="integer" required="true">
+                <label>Spintime</label>
+                <description>Spintime (ms) 0-90°</description>
+                <default>1000</default>
+            </parameter>
+            <parameter name="runTime" type="integer" required="true">
+                <label>Runtime</label>
+                <description>Runtime of the Motor (seconds)</description>
+                <default>30</default>
+            </parameter>
+            <parameter name="hwCode" type="integer" required="false"  min="0" max="256">
+                <label>Hardware code</label>
+                <description>Product-Code Hardware</description>
+                <default>69</default>
+            </parameter>
+            <parameter name="swCode" type="integer" required="false"  min="0" max="256">
+                <label>Software code</label>
+                <description>Software-Code (Software version) </description>
+                <default>7</default>
+            </parameter>
+        </config-description>
+    </thing-type>
+
+	<!-- Sienna Device Enocean Gateway Contact-->
+	<thing-type id="RFGS-CONTACT">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="BRIDGE" />
+		</supported-bridge-type-refs>
+		<label>Sienna-Enocean Contact</label>
+		<description>Sienna-Enocean Contact</description>
+
+		<channels>
+			<channel id="state" typeId="state"/>
+		</channels>
+
+		<config-description>
+			<parameter name="neuronId" type="text" required="true">
+				<label>Neuron Id</label>
+				<description>The Neuron ID that identifies one specific device.</description>
+			</parameter>
+			<parameter name="enoceanId" type="text" required="true">
+				<label>Enocean Id</label>
+				<description>The Enocean ID that identifies one specific device.</description>
+			</parameter>
+			<parameter name="enoceanEEP" type="text" required="true">
+				<label>Enocean EEP</label>
+				<description>The Enocean Equipment Profile of the device.</description>
+				<default>"D5-00-01"</default>
+			</parameter>
+			<parameter name="groupId" type="text" required="true">
+				<label>Group Id</label>
+				<description>The Group ID must be in a range A to O</description>
+				<default>"A"</default>
+			</parameter>
+			<parameter name="elementId" type="integer" required="true" min="0" max="15">
+				<label>Element Id</label>
+				<description>The Element ID must be in a range 1 to 15</description>
+				<default>1</default>
+			</parameter>
+			<parameter name="hwCode" type="integer" required="false"  min="0" max="256">
+				<label>Hardware code</label>
+				<description>Product-Code Hardware</description>
+				<default>33</default>
+			</parameter>
+			<parameter name="swCode" type="integer" required="false"  min="0" max="256">
+				<label>Software code</label>
+				<description>Software-Code (Software version) </description>
+				<default>1</default>
+			</parameter>
+			<parameter name="aliveMsg" type="integer" required="false"  min="0" max="1">
+				<label>Alive Message</label>
+				<description>Enocean device sends cyclical alive Message</description>
+				<default>1</default>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+
+	<!-- Sienna Device Enocean Gateway Movment-->
+	<thing-type id="RFGS-MOTION">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="BRIDGE" />
+		</supported-bridge-type-refs>
+		<label>Sienna-Enocean Motion</label>
+		<description>Sienna-Enocean Motion</description>
+
+		<channels>
+			<channel id="state" typeId="state"/>
+		</channels>
+
+		<config-description>
+			<parameter name="neuronId" type="text" required="true">
+				<label>Neuron Id</label>
+				<description>The Neuron ID that identifies one specific device.</description>
+			</parameter>
+			<parameter name="enoceanId" type="text" required="true">
+				<label>Enocean Id</label>
+				<description>The Enocean ID that identifies one specific device.</description>
+			</parameter>
+			<parameter name="enoceanEEP" type="text" required="true">
+				<label>Enocean EEP</label>
+				<description>The Enocean Equipment Profile of the device.</description>
+				<default>"A5-07-01"</default>
+			</parameter>
+			<parameter name="groupId" type="text" required="true">
+				<label>Group Id</label>
+				<description>The Group ID must be in a range A to O</description>
+				<default>"A"</default>
+			</parameter>
+			<parameter name="elementId" type="integer" required="true" min="0" max="15">
+				<label>Element Id</label>
+				<description>The Element ID must be in a range 1 to 15</description>
+				<default>1</default>
+			</parameter>
+			<parameter name="hwCode" type="integer" required="false"  min="0" max="256">
+				<label>Hardware code</label>
+				<description>Product-Code Hardware</description>
+				<default>33</default>
+			</parameter>
+			<parameter name="swCode" type="integer" required="false"  min="0" max="256">
+				<label>Software code</label>
+				<description>Software-Code (Software version) </description>
+				<default>1</default>
+			</parameter>
+			<parameter name="aliveMsg" type="integer" required="false"  min="0" max="1">
+				<label>Alive Message</label>
+				<description>Enocean device sends cyclical alive Message</description>
+				<default>1</default>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+
+	<!-- Sienna Device Enocean Gateway Temperature-->
+	<thing-type id="RFGS-TEMP">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="BRIDGE" />
+		</supported-bridge-type-refs>
+		<label>Sienna-Enocean Temperature</label>
+		<description>Sienna-Enocean Temperature</description>
+
+		<channels>
+			<channel id="temperature" typeId="temperature"/>
+		</channels>
+
+		<config-description>
+			<parameter name="neuronId" type="text" required="true">
+				<label>Neuron Id</label>
+				<description>The Neuron ID that identifies one specific device.</description>
+			</parameter>
+			<parameter name="enoceanId" type="text" required="true">
+				<label>Enocean Id</label>
+				<description>The Enocean ID that identifies one specific device.</description>
+			</parameter>
+			<parameter name="enoceanEEP" type="text" required="true">
+				<label>Enocean EEP</label>
+				<description>The Enocean Equipment Profile of the device.</description>
+				<default>"A5-02-05"</default>
+			</parameter>
+			<parameter name="groupId" type="text" required="true">
+				<label>Group Id</label>
+				<description>The Group ID must be in a range A to O</description>
+				<default>"A"</default>
+			</parameter>
+			<parameter name="elementId" type="integer" required="true" min="0" max="15">
+				<label>Element Id</label>
+				<description>The Element ID must be in a range 1 to 15</description>
+				<default>1</default>
+			</parameter>
+			<parameter name="hwCode" type="integer" required="false"  min="0" max="256">
+				<label>Hardware code</label>
+				<description>Product-Code Hardware</description>
+				<default>33</default>
+			</parameter>
+			<parameter name="swCode" type="integer" required="false"  min="0" max="256">
+				<label>Software code</label>
+				<description>Software-Code (Software version) </description>
+				<default>1</default>
+			</parameter>
+			<parameter name="aliveMsg" type="integer" required="false"  min="0" max="1">
+				<label>Alive Message</label>
+				<description>Enocean device sends cyclical alive Message</description>
+				<default>1</default>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+	<!-- Channel definitions of sienna devices -->
+	<channel-type id="outlet">
+		<item-type>Switch</item-type>
+		<label>Outlet</label>
+		<description>Switched outlet</description>
+		<state readOnly="false"></state>
+	</channel-type>
+	<channel-type id="input">
+		<item-type>Switch</item-type>
+		<label>Input</label>
+		<description>Input</description>
+		<state readOnly="true"></state>
+	</channel-type>
+	<channel-type id="value">
+		<item-type>Dimmer</item-type>
+		<label>Dimm-Value</label>
+		<description>Dimmer Value</description>
+		<state readOnly="false"></state>
+	</channel-type>
+	<channel-type id="position">
+		<item-type>Dimmer</item-type>
+		<label>Position</label>
+		<description>Position of the blind (0=fully down)</description>
+		<state readOnly="false"></state>
+	</channel-type>
+	<channel-type id="angle">
+		<item-type>DecimalType</item-type>
+		<label>Angle</label>
+		<description>Angle of the blind (0=fully closed)</description>
+		<state readOnly="false"></state>
+	</channel-type>
+	<channel-type id="state">
+		<item-type>String</item-type>
+		<label>State</label>
+		<description>Contact state</description>
+		<state readOnly="true"></state>
+	</channel-type>
+	<channel-type id="temperature">
+		<item-type>DecimalType</item-type>
+		<label>Temperature</label>
+		<description>Temperature</description>
+		<state readOnly="true"></state>
+	</channel-type>
+	<channel-type id="command">
+		<item-type>String</item-type>
+		<label>Command</label>
+		<description>Execute command</description>
+		<state readOnly="false"></state>
+	</channel-type>
+	<channel-type id="info">
+		<item-type>String</item-type>
+		<label>Info</label>
+		<description>Status Info</description>
+		<state readOnly="true"></state>
+	</channel-type>
+
+</thing:thing-descriptions>

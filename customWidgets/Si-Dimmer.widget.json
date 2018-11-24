@@ -1,0 +1,45 @@
+{
+    "template": "<style>\n\t.dimmer-table {\n\t  width: 100%;\n\t  border-collapse: separate; \n\t  border-spacing: 0px;\n\t  border: 0px solid #76899e; \n\t  border-radius: 10px;  \n\t} \n\t.dimmer-border {\n\t  border: 0px solid #76899e; \n\t  border-radius: 10px;\n\t}\n\t#dimmer-slider .rz-bubble {\n\t  color: #757575;\n\t}\n\t#dimmer-slider .rz-pointer {\n\t  background-color: #757575;\n\t}\n\t#dimmer-slider .rzslider .rz-bar.rz-selection {\n\t  background-color: #757575;\n\t}  \n</style>\n\n<table class=\"dimmer-table\">\n  <tr>\n    <td ng-if=\"config.showTitle == true\" colspan=\"2\">\n  <div class=\"row\">\n  \t<div class=\"ng-binding\">{{(config.title)}}</div>\n\t</div>\n    </td>\n  </tr>\n  <tr>\n    <td width=\"20%\" class=\"dimmer-border\">\n      <table style=\"width: 100%;\">\n        <tr>\n          <td style=\"padding: 0px; padding-top: 0px; padding-bottom: 0px;\">\n            <div ng-if=\"itemValue(config.item_switch) == 'NULL' || itemValue(config.item_switch) == 'UNDEF'\">\n              <widget-icon iconset=\"'eclipse-smarthome-classic'\" icon=\"config.icon\"\n                  state=\"undef\" size=\"config.icon_size\" center=\"true\" />\n            </div>  \n            <div ng-if=\"itemValue(config.item_switch) == 'OFF'\">\n              <button style= \"border: none; background: rgba(0,0,0,0); outline:none;\" \n                ng-click=\"sendCmd(config.item_switch, 'ON')\"> \n                  <widget-icon state=\"'OFF'\" iconset=\"'eclipse-smarthome-classic'\" icon=\"config.icon\" size=\"config.icon_size\"/>          \n              </button>\n            </div>  \n            <div ng-if=\"itemValue(config.item_switch) == 'ON'\">\n              <button style= \"border: none; background: rgba(0,0,0,0); outline:none;\" \n                ng-click=\"sendCmd(config.item_switch, 'OFF')\"> \n                  <widget-icon state=\"'ON'\" iconset=\"'eclipse-smarthome-classic'\" icon=\"config.icon\" size=\"config.icon_size\"/>          \n              </button>\n            </div>  \n          </td>\n        </tr>\n      </table>\n    </td>\n    <td width=\"80%\" class=\"dimmer-border\">\n      <div class=\"slider-div\" ng-init='dimmerModel={\"name\": \"dimmer\", \"item\": config.item_dimmer,\n                          \"floor\" : 0, \"ceil\": 100, \"step\": 1,\n                          \"hidelabel\" : \"true\", \"hidelimits\": \"true\" }'>\n        <widget-slider ng-model=\"dimmerModel\" id=\"dimmer-slider\" style=\"margin-top: -10px; display: block;\"></widget-slider>\n      </div>\n    </td>\n  </tr>\n</table>\n\n",
+    "name": "Si-Dimmer",
+    "author": "s.simma",
+    "settings": [
+        {
+            "type": "string",
+            "id": "title",
+            "label": "Title",
+            "default": "Light",
+            "description": "Title to display at top of widget"
+        },
+        {
+            "type": "checkbox",
+            "id": "showTitle",
+            "label": "Show Title",
+            "description": "Show",
+            "default": true
+        },
+        {
+            "type": "item",
+            "id": "item_switch",
+            "label": "Switch Item",
+            "description": "Item for the switch"
+        },
+        {
+            "type": "item",
+            "id": "item_dimmer",
+            "label": "Dimmer Item",
+            "description": "Item for the dimmer"
+        },
+        {
+            "type": "string",
+            "id": "icon",
+            "label": "smarthome-classic icon name",
+            "default": "light"
+        },
+        {
+            "type": "number",
+            "id": "icon_size",
+            "label": "Icon size",
+            "default": "50"
+        }
+    ]
+}

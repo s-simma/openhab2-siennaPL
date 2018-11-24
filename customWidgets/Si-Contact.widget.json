@@ -1,0 +1,47 @@
+{
+    "template": "<style>\n\t.contact-table {\n\t  width: 100%;\n\t  border-collapse: separate; \n\t  border-spacing: 0px;\n\t  border: 0px solid #76899e; \n\t  border-radius: 10px;  \n\t} \n\t.contact-border {\n\t  border: 0px solid #76899e; \n\t  border-radius: 10px;\n\t}\n</style>\n\n<table class=\"contact-table\">\n  <tr>\n    <td ng-if=\"config.showTitle == true\" colspan=\"1\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"ng-binding\">{{(config.title)}}</div>\n\t\t</div>\n    </td>\n  </tr>\n  <tr>\n    <td width=\"100%\" class=\"contact-border\">\n      <table style=\"width: 100%;\">\n        <tr>\n          <td style=\"padding: 0px; padding-top: 0px; padding-bottom: 0px;\">\n            <div ng-if=\"itemValue(config.item_contact) == 'NULL' || itemValue(config.item_contact) == 'UNDEF'\">\n              <widget-icon iconset=\"'eclipse-smarthome-classic'\" icon=\"config.icon\"\n                  state=\"null\" size=\"config.icon_size\" center=\"true\" />\n            </div>  \n            <div ng-if=\"itemValue(config.item_contact) == config.item_passive\">\n              <widget-icon iconset=\"'eclipse-smarthome-classic'\" icon=\"config.icon\"\n                  state=\"config.item_passive | lowercase\" size=\"config.icon_size\" center=\"true\" />\n            </div>  \n            <div ng-if=\"itemValue(config.item_contact) == config.item_active\">\n              <widget-icon iconset=\"'eclipse-smarthome-classic'\" icon=\"config.icon\"\n                  state=\"config.item_active | lowercase\" size=\"config.icon_size\" center=\"true\" />\n            </div>  \n          </td>\n        </tr>\n      </table>\n    </td>\n  </tr>\n</table>\n",
+    "name": "Si-Contact",
+    "author": "s.simma",
+    "settings": [
+        {
+            "type": "string",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "checkbox",
+            "id": "showTitle",
+            "default": true,
+            "label": "Show Title"
+        },
+        {
+            "type": "item",
+            "id": "item_contact",
+            "label": "Openhab item"
+        },
+        {
+            "type": "string",
+            "id": "item_active",
+            "label": "Item active text (e.g. ON, OFF, OPEN, CLOSED)",
+            "default": "OPEN"
+        },
+        {
+            "type": "string",
+            "id": "item_passive",
+            "label": "Item passive text (e.g. ON, OFF, OPEN, CLOSED)",
+            "default": "CLOSED"
+        },
+        {
+            "type": "string",
+            "id": "icon",
+            "label": "smarthome-classic icon name (e.g. window, door,motion)",
+            "default": "window"
+        },
+        {
+            "type": "number",
+            "id": "icon_size",
+            "label": "icon_size px",
+            "default": "70"
+        }
+    ]
+}

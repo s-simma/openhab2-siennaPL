@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<BugCollection version='3.1.2' threshold='high' effort='min'><Error></Error><Project><SrcDir>C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\main\java</SrcDir><SrcDir>C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\target\generated-sources\annotations</SrcDir><SrcDir>C:\eclipse\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.siennapl\src\test\java</SrcDir></Project></BugCollection>

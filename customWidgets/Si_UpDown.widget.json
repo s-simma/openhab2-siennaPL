@@ -1,0 +1,47 @@
+{
+    "name": "Si_UpDown",
+    "author": "s.simma",
+    "settings": [
+        {
+            "type": "string",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "item",
+            "id": "item_id",
+            "label": "Openhab item"
+        },
+        {
+            "type": "string",
+            "id": "dim_value",
+            "label": "Dimension (e.g.°C)",
+            "default": "°C"
+        },
+        {
+            "type": "number",
+            "id": "font_size",
+            "label": "Font size (px)",
+            "default": "12"
+        },
+        {
+            "type": "number",
+            "id": "step",
+            "label": "Step",
+            "default": "0,5"
+        },
+        {
+            "type": "number",
+            "id": "min_value",
+            "label": "Min Value",
+            "default": "-2"
+        },
+        {
+            "type": "number",
+            "id": "max_value",
+            "label": "Max Value",
+            "default": "2"
+        }
+    ],
+    "template": "<div class=\"ng-binding\">{{(config.title)}}</div>\n\n<center><button style=\"margin-top:0px; width: 80%;\n  border: 0; color: white; background: transparent;\n  font-size: {{config.font_size}}px\"\n  ng-click=\"sendCmd(config.item_id, itemValue(config.item_id) * 1 + config.step)\">\n  <i class=\"glyphicon glyphicon-menu-up\"></i>\n</button></center>\n\n<div ng-if=\"itemValue(config.item_id)== 'NULL' || itemValue(config.item_id)== 'UNDEF'\">\n\t<center><span style=\"color: #FF8000; font-size: {{config.font_size}}px\">--- {{config.dim_value}}</span></center>\n</div>\n<div ng-if=\"itemValue(config.item_id)!= 'NULL' || itemValue(config.item_id)!= 'UNDEF'\">\n\t<center><span style=\"color: #FF8000; font-size: {{config.font_size}}px\">{{'%.1f' | sprintf:itemValue(config.item_id)}}{{config.dim_value}}</span></center>\n</div>\n\n<center><button style=\"margin-top:0px; width: 80%;\n  border: 0; color: white; background: transparent;\n  font-size: {{config.font_size}}px\"\n  ng-click=\"sendCmd(config.item_id, itemValue(config.item_id) * 1 - config.step)\">\n  <i class=\"glyphicon glyphicon-menu-down\"></i>\n</button></center>\n"
+}

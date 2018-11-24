@@ -1,0 +1,8 @@
+:root {
+    --header-bg: none;
+    --body-bg: #343434;
+    --box-bg: rgba(0, 0, 0, 0.2);
+    --icon-color-filter: invert(50%) sepia(0%) saturate(0%);
+    --primary-color: #FF8000;
+	--widget-border-radius: 6px;	
+}

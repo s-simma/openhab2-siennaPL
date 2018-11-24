@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="siennapl"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 org.eclipse.smarthome.thing-description.xsd">
+
+	<bridge-type id="BRIDGE">
+		<label>Sienna Powerline Bridge</label>
+		<config-description>
+			<parameter name="serialPort" type="text" required="true">
+				<label>COM Port</label>
+				<description>The COM Port where the Sienna gateway is connected to</description>
+				<default>COM8</default>
+			</parameter>
+			<parameter name="baud" type="integer" required="true">
+				<label>Baudrate</label>
+				<description>Baudrate for seriell Interface to Sienna gateway</description>
+				<default>9600</default>
+			</parameter>
+			<parameter name="neuronId" type="text" required="true">
+				<label>Neuron Id</label>
+				<description>The Neuron ID that identifies the Sienna gateway</description>
+			</parameter>
+			<parameter name="pollingInterval" type="integer" required="false" min="5" max="60">
+				<label>Polling Interval</label>
+				<description>Interval for polling the Sienna gateway</description>
+				<default>15</default>
+			</parameter>
+		</config-description>
+	</bridge-type>
+</thing:thing-descriptions>
